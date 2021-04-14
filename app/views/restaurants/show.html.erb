@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @restaurant.name %> </h1>
+  <p class="lead">Address: <%= @restaurant.address %> </p>
+  <p class="lead">Phone: <%= @restaurant.phone_number %> </p>
+  <p class="lead"><%= @restaurant.category %> </p>
+
+  <hr class="my-4">
+  <h5>Reviews</h5>
+  <div>
+    <% @restaurant.reviews.each do |review| %>
+      <div class="ratings"> <span class="product-rating"><%= review.rating %></span><span>/5</span>
+          <p class="lead"><%= review.content %></p>
+      </div>
+      <% end %>
+  </div>
+
+</div>
+<br>
+<%= link_to 'Back to restaurants', restaurants_path, class:"btn btn-outline-dark" %>
+
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class:"btn btn-outline-dark" %>
+
+
+
+<!--             <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div> -->
