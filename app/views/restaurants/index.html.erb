@@ -1,8 +1,9 @@
 <div class="jumbotron">
-  <h1 class="display-4">All Restaurants</h1>
+  <h1 class="display-4">🍴All Restaurants 🍱🌮🍔</h1>
   <% @restaurants.each do |restaurant| %>
-      <p class="lead"> <%= link_to restaurant.name, restaurant_path(restaurant) %> </p>
-      <p class="lead"><%= restaurant.category %> </p>
+      <hr class="my-4">
+      <p class="lead"><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+      <p class="text-right" style="color: #e53964"><%= restaurant.category %> </p>
   <% end %>
 </div>
 

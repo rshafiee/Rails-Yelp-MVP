@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h2 class="mb-4" style="color: #7e73ff"><%= @restaurant.name %></h2>
+  <h5 class="mb-4" style="color: #e53964"><strong>All Reviews</strong></h5>
+    <% @restaurant.reviews.each do |review| %>
+      <div class="ratings"> <span class="product-rating" style="color:#e53964"><%= review.rating %></span><span style="color:#e53964">/5</span>
+          <p class="lead"><%= review.content %></p>
+      </div>
+      <% end %>
+</div>
+
+<%= link_to 'Back to restaurant', restaurant_path, class:"btn btn-outline-dark" %>
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class:"btn btn-outline-dark" %>
+
