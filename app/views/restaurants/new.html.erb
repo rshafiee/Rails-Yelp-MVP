@@ -1,12 +1,13 @@
 <div class="jumbotron">
-  <h2 class="display-4">Create your restaurant</h2>
+  <h2 class="display-4">Add a new restaurant</h2>
 
   <%= simple_form_for(@restaurant) do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :phone_number %>
     <%= f.input :category %>
-    <%= f.button :submit, class:"btn btn-outline-dark" %>
+    <%= f.button :submit, class:"btn btn-outline-dark border-success" %>
+    <%= link_to 'Back to restaurants', restaurants_path, class:"btn btn-outline-dark border-primary" %>
   <% end %>
 
 </div>
